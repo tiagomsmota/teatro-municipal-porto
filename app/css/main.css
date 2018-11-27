@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
-@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700");
 body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
   font-family: Inconsolata, monospace; }
+  body a {
+    text-transform: none;
+    color: inherit; }
 
 header {
   position: relative;
@@ -12,7 +13,6 @@ header {
   height: 100vh;
   overflow: hidden;
   color: white;
-  background-color: black;
   z-index: 0; }
   header nav {
     display: flex;
@@ -44,9 +44,9 @@ header {
         letter-spacing: 3px;
         margin: 0; }
   header .main-piece {
+    cursor: pointer;
     height: 100vh;
-    width: 100vw;
-    cursor: pointer; }
+    width: 100vw; }
     header .main-piece:hover > img {
       width: 101vw; }
     header .main-piece img {
@@ -91,9 +91,9 @@ main {
   main .highlights-piece {
     position: relative;
     margin: 0 0 15vh 0; }
-    main .highlights-piece:hover > img {
+    main .highlights-piece:hover img {
       transform: translateX(15px); }
-    main .highlights-piece:hover > .highlights-piece-info {
+    main .highlights-piece:hover .highlights-piece-info {
       transform: translateX(-15px); }
     main .highlights-piece img {
       cursor: pointer;
@@ -143,16 +143,17 @@ main {
         font-size: 1.2rem; }
       main .highlights-piece .highlights-piece-info h3 {
         position: absolute;
-        bottom: -6px;
-        right: 5%;
+        bottom: -16px;
+        right: 0;
         margin: 0;
-        font-size: 1.5rem;
+        font-size: 4rem;
+        font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 1.5px;
-        color: #BFBFBF; }
-  main .image-right:hover > img {
+        color: rgba(191, 191, 191, 0.3); }
+  main .image-right:hover img {
     transform: translateX(-15px); }
-  main .image-right:hover > .highlights-piece-info {
+  main .image-right:hover .highlights-piece-info {
     transform: translateX(15px); }
   main .image-right img {
     position: relative;
@@ -238,7 +239,7 @@ footer {
     footer .footer-logos .footer-logo-tmp {
       max-width: 250px; }
 
-aside {
+.menu {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -250,14 +251,15 @@ aside {
   padding: 5%;
   background-color: white;
   opacity: 1;
+  z-index: 10;
   transition: all 0.35s ease-in-out; }
-  aside h1, aside h2 {
+  .menu h1, .menu h2 {
     font-size: 1.5rem;
     font-weight: normal;
     color: #BFBFBF;
     letter-spacing: 1px;
     margin: 0; }
-  aside .menu-close-btn {
+  .menu .menu-close-btn {
     cursor: pointer;
     position: absolute;
     top: 10vh;
@@ -268,26 +270,26 @@ aside {
     transform: rotate(-90deg);
     z-index: 10;
     opacity: 1; }
-    aside .menu-close-btn p {
+    .menu .menu-close-btn p {
       text-transform: lowercase;
       font-family: "PT Sans Narrow", sans-serif;
       font-weight: normal;
       font-size: 1rem;
       letter-spacing: 3px;
       margin: 0; }
-  aside .menu-list {
+  .menu .menu-list {
     width: 30vw;
     display: flex;
     flex-direction: column;
     align-items: flex-end; }
-    aside .menu-list a {
+    .menu .menu-list a {
       position: relative;
       color: inherit;
       text-decoration: none;
       font-weight: bold;
       font-size: 1.2rem;
       margin: 4% 0%; }
-      aside .menu-list a::after {
+      .menu .menu-list a::after {
         content: " ";
         position: absolute;
         left: 0;
@@ -297,9 +299,19 @@ aside {
         opacity: 0;
         background-color: black;
         transition: all 0.35s ease-in-out; }
-      aside .menu-list a:hover::after {
+      .menu .menu-list a:hover::after {
         width: 100%;
         opacity: 1; }
+    .menu .menu-list .menu-active::after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      bottom: -5px;
+      height: 2px;
+      opacity: 1;
+      background-color: black;
+      transition: all 0.35s ease-in-out; }
 
 .hidden {
   position: fixed;
@@ -319,3 +331,18 @@ aside {
     right: 34.9vw; }
   .dark-theme .menu-list a::after {
     background-color: white; }
+
+.content-shadow {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+  background-color: black;
+  opacity: 0.7;
+  transition: all 0.25s ease-in-out; }
+
+.shadow-hidden {
+  opacity: 0;
+  pointer-events: none; }
