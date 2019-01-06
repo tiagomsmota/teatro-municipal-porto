@@ -1,0 +1,194 @@
+header.schedule {
+  height: auto; }
+  header.schedule nav {
+    padding: 3vh 7%; }
+  header.schedule .menu-btn {
+    background-color: black;
+    color: white; }
+
+main.schedule {
+  position: relative;
+  width: 61vw;
+  margin: 0% 0% 5% 7%; }
+  main.schedule .schedule-page-title {
+    position: absolute;
+    right: -24vw;
+    letter-spacing: 6px; }
+  main.schedule .month-pieces-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  main.schedule .month-spacer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 5% 0%; }
+    main.schedule .month-spacer .month-spacer-line {
+      background-color: #BFBFBF;
+      height: 1.5px;
+      width: 100%; }
+    main.schedule .month-spacer h1 {
+      position: absolute;
+      left: 5vw;
+      display: inline-block;
+      font-size: 1.5rem;
+      background-color: white;
+      padding: 0% 2% 3px 2%; }
+  main.schedule .month-piece {
+    position: relative;
+    margin: 0% 6% 12.5% 0%; }
+    main.schedule .month-piece:hover img {
+      transform: translateY(-15px); }
+    main.schedule .month-piece img {
+      cursor: pointer;
+      width: 25vw;
+      transition: all 0.5s ease-in-out; }
+    main.schedule .month-piece .month-piece-info {
+      cursor: pointer;
+      position: absolute;
+      bottom: -25%;
+      left: 5%;
+      display: flex;
+      flex-direction: column;
+      width: 25vw;
+      min-height: 180px;
+      padding: 10px 15px;
+      background-color: black;
+      color: white;
+      transition: all 0.5s ease-in-out; }
+      main.schedule .month-piece .month-piece-info .month-piece-info-meta {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0px; }
+        main.schedule .month-piece .month-piece-info .month-piece-info-meta .month-piece-info-meta-datetime {
+          display: flex;
+          font-size: 0.95rem;
+          letter-spacing: 1px; }
+          main.schedule .month-piece .month-piece-info .month-piece-info-meta .month-piece-info-meta-datetime p {
+            margin: 5px 7px 0px 0px; }
+            main.schedule .month-piece .month-piece-info .month-piece-info-meta .month-piece-info-meta-datetime p:first-of-type {
+              font-weight: bold; }
+        main.schedule .month-piece .month-piece-info .month-piece-info-meta .month-piece-info-meta-venue {
+          font-size: 0.95rem;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          font-weight: bold;
+          margin: 5px 0px 0px 0px; }
+      main.schedule .month-piece .month-piece-info h1 {
+        margin: 12.5px 0%;
+        font-family: "PT Sans Narrow", sans-serif;
+        font-weight: bold;
+        font-size: 2.2rem;
+        text-transform: none;
+        color: white; }
+      main.schedule .month-piece .month-piece-info h2 {
+        margin: 0% 0% 25px 0%;
+        font-weight: normal;
+        font-size: 1.2rem; }
+      main.schedule .month-piece .month-piece-info h3 {
+        position: absolute;
+        bottom: -12px;
+        right: 0;
+        margin: 0;
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: rgba(191, 191, 191, 0.3); }
+  main.schedule .show-more-btn {
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    align-self: flex-end;
+    text-transform: lowercase;
+    font-size: 1.2rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: #BFBFBF; }
+    main.schedule .show-more-btn::after {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0px;
+      height: 3px;
+      background-color: black;
+      opacity: 0;
+      transition: all 0.35s ease-in-out; }
+    main.schedule .show-more-btn:hover::after {
+      width: 100%;
+      opacity: 1; }
+
+aside {
+  position: absolute;
+  top: 29vh;
+  right: 8%;
+  height: 170vh; }
+  aside .side-menu-content {
+    position: sticky;
+    top: 5vh; }
+  aside .calendar {
+    display: flex;
+    flex-direction: column; }
+    aside .calendar .calendar-month {
+      display: flex;
+      justify-content: center; }
+      aside .calendar .calendar-month p {
+        margin: 1.5px 20px;
+        font-weight: bold; }
+      aside .calendar .calendar-month .month-name {
+        text-transform: uppercase;
+        letter-spacing: 2px; }
+      aside .calendar .calendar-month .month-previous-btn, aside .calendar .calendar-month .month-next-btn {
+        cursor: pointer; }
+    aside .calendar .calendar-week {
+      display: flex;
+      justify-content: center; }
+      aside .calendar .calendar-week p {
+        min-width: 20px;
+        max-width: 20px;
+        text-align: center;
+        margin: 1.5px 2.5px;
+        padding: 2.5px;
+        font-weight: bold;
+        font-size: 0.9rem; }
+    aside .calendar .calendar-days {
+      display: flex;
+      justify-content: center;
+      color: #BFBFBF; }
+      aside .calendar .calendar-days .calendar-days-item {
+        cursor: pointer;
+        text-align: center;
+        font-size: 0.9rem;
+        min-width: 20px;
+        max-width: 20px;
+        margin: 1.5px 2.5px;
+        padding: 2.5px;
+        transition: all 0.15s ease-in; }
+        aside .calendar .calendar-days .calendar-days-item:hover {
+          background-color: rgba(191, 191, 191, 0.15);
+          color: black; }
+      aside .calendar .calendar-days .empty-day:hover {
+        cursor: default;
+        opacity: 0; }
+  aside .filters {
+    margin: 15% 0%; }
+    aside .filters h1 {
+      margin: 0;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center; }
+    aside .filters .filters-columns {
+      display: flex;
+      justify-content: center; }
+      aside .filters .filters-columns .filters-column {
+        margin: 0% 5% 0% 5%; }
+        aside .filters .filters-columns .filters-column p {
+          cursor: pointer;
+          margin: 10px 0%;
+          color: #BFBFBF;
+          font-size: 0.9rem;
+          transition: all 0.15s ease-in; }
+          aside .filters .filters-columns .filters-column p:hover {
+            color: black; }

@@ -1,0 +1,225 @@
+body.piece {
+    background-color: black;
+    // color: white;
+}
+
+header.piece {
+    height: auto;
+
+    nav {
+        padding: 3vh 7%;
+    }
+    .menu-btn {
+        background-color: white;
+        color: black;
+    }
+    .dark-theme {
+        background-color: white !important;
+        color: black !important;
+    }
+}
+
+main.piece {
+    // width: 100%;
+    margin: 10vh 12.5vw;
+    background-color: white;
+}
+
+article.piece {
+    position: relative;
+
+    .piece-meta {
+        position: absolute;
+        top: 10vh;
+        right: 7vw;
+        display: flex;
+        flex-direction: column;
+
+        .piece-meta-venue {
+            margin: 0vh 0% 0% 0%;
+
+            .piece-meta-venue-name {
+                margin: 0;
+                font-size: 1.15rem;
+                font-weight: bold;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+            
+            .piece-meta-venue-room {
+                margin: 2.5px 0% 0% 0%;
+                letter-spacing: 2px;
+            }
+        }
+
+        .piece-meta-date {
+            margin: 4vh 0% 0% 0%;
+
+            .piece-meta-date-day {
+                margin: 0;
+                font-weight: bold;
+                font-size: 1rem;
+            }
+            
+            .piece-meta-date-time {
+                margin: 2.5px 0% 0% 0%;
+            }
+        }
+
+        .piece-meta-extra {
+            margin: 4vh 0% 0% 0%;
+
+            p {
+                margin: 2.5px 0% 0% 0%;
+
+                .piece-meta-icon {
+                    font-size: 0.7rem;
+                    line-height: 1.2rem;
+                    margin-right: 5px;
+                    text-align: center;
+                }
+                
+                &.piece-price {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .piece-meta-tickets {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 4vh 0% 0% 0%;
+            height: 35px;
+            min-width: 125px;
+            width: 20%;
+            background-color: black;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .piece-info {
+        margin-top: 80vh;
+        
+        img {
+            position: absolute;
+            top: -5vh;
+            left: -5vh;
+            width: 52vw;
+        }
+
+        .piece-info-title {
+            margin: 0% 7% 0% 7%;
+            font-family: "PT Sans Narrow", sans-serif;
+            font-weight: bold;
+            font-size: 3.5rem;
+            text-transform: none;
+            letter-spacing: normal;
+            color: black;
+        }
+
+        .piece-info-company-title {
+            margin: 1.5% 7% 0% 7%;
+            font-size: 2rem;
+        }
+
+        .piece-info-type {
+            position: absolute;
+            top: 75vh;
+            right: -17.5%;
+            margin: 0;
+            transform: rotate(-90deg);
+            font-size: 4.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(191, 191, 191, 0.6);
+        }
+
+        .piece-info-main {
+            margin: 5% 7% 0% 7%;
+            font-size: 1.1rem;
+
+            p:first-of-type {
+                font-weight: bold;
+            }
+        }
+
+        .piece-info-company {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin: 5% 7% 0% 7%;
+
+            
+            p {
+                margin: 0;
+                width: 55%;
+                font-size: 1.1rem;
+                
+                span {
+                    font-weight: bold;
+                }
+            }
+
+            img {
+                position: relative;
+                width: 30%;
+            }
+        }
+    }
+
+    .piece-mentions {
+        display: inline-block;
+        margin: 0% 7% 5% 7%;
+
+        h1 {
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: black;
+        }
+
+        .piece-mention {
+            // display: inline;
+            margin: 0.5% 0% 0% 0%;
+
+            p {
+                display: inline;
+                margin: 0%;
+                font-size: 0.8rem;
+
+                &:first-of-type {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                }
+            }
+        }
+    }
+}
+
+footer.piece {
+    margin-top: 12vh;
+    background-color: white;
+    color: black;
+
+    .footer-logo-porto {
+        filter: brightness(0%);
+    }
+
+    a {
+        &:after {
+            background-color: black;
+        }
+    }
+}
