@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "harp server --port $PORT"
+    "start": "node server.js"
   },
   "author": "Tiago Mota",
   "license": "ISC",
