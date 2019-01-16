@@ -23,6 +23,6 @@
     "run-sequence": "^2.2.1"
   },
   "dependencies": {
-    "harp": "^0.29.0"
+    "express": "^4.16.4"
   }
 }
